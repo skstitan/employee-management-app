@@ -2,6 +2,20 @@
 
 A full-stack employee management application with CRUD operations, search, and filter capabilities.
 
+## Screenshots
+
+### Employee List View
+![Employee List](https://github.com/user-attachments/assets/ffd79670-ca62-4f40-b5f5-a72461124acc)
+
+### Add Employee Form
+![Add Employee](https://github.com/user-attachments/assets/10f734eb-3923-4040-b135-1a50be6e941d)
+
+### Filter by Department
+![Filter Employees](https://github.com/user-attachments/assets/2d44a3ea-61f2-42b5-af4b-151fc07a8c62)
+
+### Edit Employee
+![Edit Employee](https://github.com/user-attachments/assets/46ca2fdc-f729-4fcb-90b9-2cc836fb941a)
+
 ## Features
 
 - **CRUD Operations**: Create, Read, Update, and Delete employee records
@@ -9,6 +23,8 @@ A full-stack employee management application with CRUD operations, search, and f
 - **Search & Filter**: Filter employees by department
 - **RESTful API**: Clean API design with proper error handling
 - **Responsive UI**: Modern React frontend with intuitive interface
+- **Security**: Rate limiting to prevent abuse
+- **Data Validation**: Comprehensive input validation and error handling
 
 ## Tech Stack
 
@@ -16,6 +32,7 @@ A full-stack employee management application with CRUD operations, search, and f
 - **Database**: SQLite
 - **Frontend**: React.js
 - **API**: RESTful design
+- **Security**: express-rate-limit middleware
 
 ## Project Structure
 
@@ -154,6 +171,13 @@ curl -X PUT http://localhost:5000/api/employees/1 \
 ```bash
 curl -X DELETE http://localhost:5000/api/employees/1
 ```
+
+## Security Features
+
+- **Rate Limiting**: API endpoints are rate-limited to 100 requests per 15 minutes per IP
+- **Input Validation**: All employee data is validated before processing
+- **Email Uniqueness**: Email addresses must be unique across all employees
+- **Error Handling**: Comprehensive error handling with appropriate HTTP status codes
 
 ## Error Handling
 
